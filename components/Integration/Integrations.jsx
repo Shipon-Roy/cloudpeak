@@ -1,6 +1,9 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const integrations = [
   {
@@ -54,6 +57,9 @@ const integrations = [
 ];
 
 export default function Integrations() {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
   return (
     <section className="py-20 lg:py-28">
       <div>

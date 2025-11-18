@@ -42,7 +42,7 @@ export default function Contacts() {
           </div>
 
           {/* Right Form */}
-          <div className="bg-gray-950 border text-gray-200 rounded-2xl shadow-xl p-8">
+          <div className="bg-gray-800 border text-gray-200 rounded-2xl shadow-xl p-8">
             <form>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>

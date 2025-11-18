@@ -3,8 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container from "../Container";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function FeatureBanner() {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
   return (
     <section className="section relative overflow-hidden lg:pt-20">
       <Container>
@@ -41,7 +47,7 @@ export default function FeatureBanner() {
               >
                 <span>See How It Works</span>
                 <span className="relative w-5 h-5 grid place-items-center overflow-hidden">
-                  <i className="rotate-[-45deg] group-hover:translate-x-full group-hover:-translate-y-full transition-transform duration-500 ease-out w-5 h-5 grid place-items-center">
+                  <i className="-rotate-45 group-hover:translate-x-full group-hover:-translate-y-full transition-transform duration-500 ease-out w-5 h-5 grid place-items-center">
                     <svg
                       fill="none"
                       stroke="currentColor"
@@ -56,7 +62,7 @@ export default function FeatureBanner() {
                       />
                     </svg>
                   </i>
-                  <i className="rotate-[-45deg] absolute top-full right-full group-hover:translate-x-full group-hover:-translate-y-full transition-transform duration-500 ease-out w-5 h-5 grid place-items-center">
+                  <i className="-rotate-45 absolute top-full right-full group-hover:translate-x-full group-hover:-translate-y-full transition-transform duration-500 ease-out w-5 h-5 grid place-items-center">
                     <svg
                       fill="none"
                       stroke="currentColor"

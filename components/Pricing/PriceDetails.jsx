@@ -4,6 +4,9 @@ import Image from "next/image";
 import Container from "../Container";
 import { SiTicktick } from "react-icons/si";
 import Link from "next/link";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const plans = [
   {
@@ -48,6 +51,9 @@ const plans = [
 ];
 
 export default function PriceDetails() {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
   return (
     <section className="section py-14 lg:py-20">
       <Container>
