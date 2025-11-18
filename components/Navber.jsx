@@ -73,7 +73,7 @@ export default function Navbar() {
                   ["Case Studies", "/caseStudies"],
                   ["Terms & Conditions", "/terms-conditions"],
                   ["Blog", "/blog"],
-                  ["Book a Free Demo", "/book-demo"],
+                  ["Book a Free Demo", "/freedemo"],
                   ["Privacy Policy", "/privacy-policy"],
                   ["404 Page", "/404"],
                 ].map(([label, href]) => (
