@@ -108,6 +108,7 @@ export default function Navbar() {
             {/* Mobile CTA */}
             <li className="lg:hidden">
               <Link
+                target="_blank"
                 href="https://themefisher.com/products/cloudpeak-nextjs"
                 className="block text-center bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
               >
@@ -119,6 +120,7 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden lg:block">
             <Link
+              target="_blank"
               href="https://themefisher.com/products/cloudpeak-nextjs"
               className="bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition"
             >
