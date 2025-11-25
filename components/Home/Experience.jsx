@@ -3,8 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container from "../Container";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Experience() {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
   return (
     <section className="py-20 relative">
       <Container>
@@ -14,10 +20,14 @@ export default function Experience() {
               {/* Text Content */}
               <div className="px-5 sm:px-12 pr-12 py-7 sm:py-14 relative z-30 sm:col-span-7">
                 <div className="section-intro pb-0">
-                  <h2 className="text-6xl   mb-4 ">
+                  <h2 data-aos="fade-up-sm" className="text-6xl   mb-4 ">
                     Ready to Transform <br /> Your Experience?
                   </h2>
-                  <p className="text-gray-400 mb-10">
+                  <p
+                    data-aos="fade-up-sm"
+                    data-aos-delay="100"
+                    className="text-gray-400 mb-10"
+                  >
                     Get Started Now and Explore New Possibilities with Our
                     Comprehensive <br /> Resources.
                   </p>
@@ -65,7 +75,11 @@ export default function Experience() {
               </div>
 
               {/* Image Content */}
-              <div className="relative h-[200px] sm:h-auto sm:col-span-5 z-20">
+              <div
+                data-aos="fade-up-sm"
+                data-aos-delay="200"
+                className="relative h-[200px] sm:h-auto sm:col-span-5 z-20"
+              >
                 <div className="absolute left-20 top-10 sm:left-0 sm:top-20 z-20 rounded-3xl border border-white/15 p-4">
                   <Image
                     src="/assets/desktop_dashboard.webp"

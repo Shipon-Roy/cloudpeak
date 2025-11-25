@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import Container from "../Container";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const TESTIMONIALS = [
   {
@@ -50,16 +52,26 @@ const TESTIMONIALS = [
 ];
 
 export default function Testimonials() {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
   return (
     <section className="py-20 ">
       <Container>
         <div className="container mx-auto px-4">
           {/* Section Intro */}
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2
+              data-aos="fade-up-sm"
+              className="text-3xl md:text-4xl font-bold text-white mb-4"
+            >
               Trusted by 14,000+ users
             </h2>
-            <p className="text-gray-400 leading-relaxed mx-auto w-5/6">
+            <p
+              data-aos="fade-up-sm"
+              data-aos-delay="100"
+              className="text-gray-400 leading-relaxed mx-auto w-5/6"
+            >
               Sharing Their Successes and Transformative Experiences with
               CloudPeak's Powerful SaaS Solutions
             </p>
@@ -69,6 +81,8 @@ export default function Testimonials() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {TESTIMONIALS.map((t, index) => (
               <div
+                data-aos="fade-up-sm"
+                data-aos-delay="200"
                 key={index}
                 className="border border-gray-700 rounded-3xl shadow-inner hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between h-full bg-gray-800"
               >

@@ -2,10 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import Container from "../Container";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function HowCloudPeakWorks() {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
   return (
     <Container>
       <div className="container">

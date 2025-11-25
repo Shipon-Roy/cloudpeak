@@ -1,20 +1,32 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "../Container";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Pricing() {
   const [isYearly, setIsYearly] = useState(false);
 
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
   return (
     <section className="py-20">
       <Container>
         <div className="container mx-auto px-4">
           {/* Section Intro */}
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            <h2
+              data-aos="fade-up-sm"
+              className="text-3xl md:text-4xl font-bold mb-4 text-white"
+            >
               Choose A Plan
             </h2>
-            <p className="text-gray-400 leading-relaxed">
+            <p
+              data-aos="fade-up-sm"
+              data-aos-delay="100"
+              className="text-gray-400 leading-relaxed"
+            >
               Created to Simplify Your Experience and Unlock the Advantages of
               CloudPeak's Innovative Technologies
             </p>
@@ -54,6 +66,8 @@ export default function Pricing() {
 
               return (
                 <div
+                  data-aos="fade-up-sm"
+                  data-aos-delay="200"
                   key={index}
                   className={`border border-gray-700 rounded-3xl p-8 flex flex-col justify-center transition-all duration-500 hover:shadow-xl hover:scale-105 w-full max-w-sm mx-auto ${
                     plan.popular ? "bg-white/10" : "bg-transparent"

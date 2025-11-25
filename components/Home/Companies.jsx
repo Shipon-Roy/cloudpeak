@@ -1,15 +1,21 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import Container from "../Container";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+const brands = [
+  "/assets/brands/1.svg",
+  "/assets/brands/2.svg",
+  "/assets/brands/3.svg",
+  "/assets/brands/4.svg",
+  "/assets/brands/5.svg",
+];
 
 export default function Companies() {
-  const brands = [
-    "/assets/brands/1.svg",
-    "/assets/brands/2.svg",
-    "/assets/brands/3.svg",
-    "/assets/brands/4.svg",
-    "/assets/brands/5.svg",
-  ];
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
 
   return (
     <section className="pt-20 xl:pt-24">
